@@ -1,4 +1,7 @@
-from flask import Flask, render_template, url_for
+#from crypt import methods
+
+#from httpx import request
+from flask import Flask, render_template, url_for, request
 
 app = Flask(__name__)
 
@@ -18,8 +21,13 @@ def base():
 def mision():
     return render_template('mision.html')
 
-@app.route("/vision")
+@app.route("/vision", methods=['GET', 'POST'])
 def vision():
+    if request.method == 'POST':
+        datos = request.form
+        print(datos)
+    else:
+        print("Metodo GET")
     return render_template('vision.html')
 
 @app.route("/programas")
