@@ -23,6 +23,6 @@ db_file = "base.db"  # Archivo de base de datos SQLite
 connection = create_connection(db_file)
 if connection:
     # Ejecutar las sentencias SQL
-    execute_sql_script(connection, 'Documents/sentencias.sql')  # El archivo donde están las sentencias SQL
+    execute_sql_script(connection, 'sentencias.sql')  # El archivo donde están las sentencias SQL
     # Cerrar la conexión
     connection.close()

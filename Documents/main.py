@@ -47,6 +47,8 @@ def listacarreras():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM CARRERA;")
     programas = cursor.fetchall()
+    conn.close()
+
     return render_template('listacarreras.html', carreras = programas)
 
 @app.route("/eliminar/<codigo>")
@@ -58,7 +60,7 @@ def eliminar(codigo):
     conn.close()
     return redirect(url_for('programas.html'))
 
-@app.route("/actualizar/<codigo>")
+@app.route("/actualizar/<codigo>", methods=('GET', 'POST'))
 def actualizar(codigo):
     return redirect(url_for('programas.html'))
 

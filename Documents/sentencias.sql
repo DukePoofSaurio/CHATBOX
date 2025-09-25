@@ -4,6 +4,11 @@ CREATE TABLE IF NOT EXISTS carrera (
 );
 
 INSERT INTO carrera (descripcion) VALUES
+('Ingenieria en Sistemas de Informacion'),
+('Licenciatura en Sistemas de Informacion'),
+('Tecnicatura en Programacion'),
+('Tecnicatura en Analisis de Sistemas'),
+('Tecnicatura en Redes y Telecomunicaciones');
 ('Zootecnia'),
 ('Veterinaria'),
 ('Medicina'),
